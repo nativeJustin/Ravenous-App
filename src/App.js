@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "./logo.svg";
+//import logo from "./logo.svg";
 import "./App.css";
 import SearchBar from "./components/Search Bar/Searchbar";
 import BusinessList from "./components/BusinessList/BusinessList";
@@ -10,15 +10,15 @@ class App extends React.Component {
     super(props);
 
     this.state = {
-      businesses: []
+      businesses: [],
     };
 
     this.searchYelp = this.searchYelp.bind(this);
   }
 
   searchYelp(term, location, sortBy) {
-    Yelp.search(term, location, sortBy).then(businesses => {
-      this.setState({businesses: businesses});
+    Yelp.search(term, location, sortBy).then((businesses) => {
+      this.setState({ businesses: businesses });
     });
   }
 
